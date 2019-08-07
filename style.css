@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "-apple-system", BlinkMacSystemFont, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header .services {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #bcc3ce;
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
+header .services a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #077fcc;
+}
+
+header .services span {
+  margin-left: 90px;
+  color: #999;
+}
+
+header .services a.active {
+  color: black;
+}
+
+header .nav {
+  border-bottom: 1px solid #d5dddf;
+}
+
+header .nav menu {
+  margin: 0 auto;
+  max-width: 1164px;
+  padding: 0 32px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+header .nav menu li {
+  display: inline-block;
+  margin: 0 28px 0 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+header .nav menu li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 23px 0;
+  color: #999;
+  font-weight: 500;
+}
+
+header .nav menu li a.active {
+  color: #464646;
+}
+
+header .nav menu li:first-child a {
+  padding: 0;
+  margin-right: 24px;
+}
+
+.icon-svg {
+  color: #323436;
+  fill: currentColor;
+}
+
+pre{
+  background-color: #eee;
+}
+
+.container {
+  padding: 10px;
+}
+
+.content {
+  height: 100px;
+  width: 500px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.rel-abs-example-container{
+position: relative;
+width: 300px;
+height: 200px;
+background: yellow;
+}
+
+.rel-abs-example-container .abs-block{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  width: 100px;
+  height: 100px;
+  background: red;
+  opacity: .5;
+}
