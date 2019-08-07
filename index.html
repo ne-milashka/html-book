@@ -11,7 +11,6 @@
 
 <body>
 
-
     <header>
         <div class="services">
             <a class="active" href="https://ne-milashka.github.io/html-book/">HTML Book page</a>
@@ -19,7 +18,7 @@
         </div>
 
         <div class="nav">
-            <menu>
+            <menu class="container">
                 <li>
                     <a href="//habr.com">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon-svg" width="71" height="26"
@@ -30,29 +29,50 @@
                         </svg>
                     </a>
                 </li>
-                <li><a href="//publ.com" class="active">Публикации</a></li>
-                <li><a href="//news.com">Новости</a></li>
-                <li><a href="//users.com">Пользователи</a></li>
-                <li><a href="//habs.com">Хабы</a></li>
-                <li><a href="//comp.com">Компании</a></li>
-                <li><a href="//pes.com">Песочница</a></li>
+                <li><a href="#contents">Содержание</a></li> 
             </menu>
         </div>
     </header>
+    <section>
+        <div class="container">
+            <h1 id="contents">HTML Book page</h1>
+            <ul>
+                <li><a href="#margin-0-auto">Центрирование блока относительно родителя</a></li>
+                <li><a href="#relative-absolute">Вертикальное и горизонтальное центрирование блока относительно
+                        релятивного контейнера</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 id="margin-0-auto">Центрирование блока относительно родителя</h2>
+            <p>Пример:</p>
+        </div>
+        <style>
+            .example1-container {
+                padding: 10px;
+                background-color: lightblue;
+            }
 
-    <h2>Центрирование блока относительно родителя</h2>
-    <p>Пример:</p>
+            .example1-content {
+                height: 100px;
+                width: 500px;
+                background-color: teal;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="example1-container">
+            <div class="example1-content"></div>
+        </div>
+        <div class="container">
+            <p>Код:</p>
 
-    <div class="example1-container">
-        <div class="example1-content"></div>
-    </div>
-    <p>Код:</p>
-
-    <pre>
-&lt;div class="example1-container">
-    &lt;div class="example1-content">&lt;/div>
-&lt;/div>
-        
+            <pre data-title="html">
+&lt;div class="example1-container"&gt;
+    &lt;div class="example1-content"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <pre data-title="css">
 .example1-container {
     padding: 10px;
 }
@@ -63,11 +83,63 @@
     background-color: red;
     margin: 0 auto;
 }
-</pre>
+            </pre>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2 id="relative-absolute">Вертикальное и горизонтальное центрирование блока относительно релятивного
+                контейнера</h2>
+            <p>Пример:</p>
+        </div>
+        <style>
+            .example2-container {
+                position: relative;
+                width: 100%;
+                height: 300px;
+                background: lightblue;
+            }
 
-    <div class="rel-abs-example-container">
-        <div class="abs-block"></div>
-    </div>
+            .example2-block {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px;
+                height: 80px;
+                background: teal;
+            }
+        </style>
+        <div class="example2-container">
+            <div class="example2-block"></div>
+        </div>
+        <div class="container">
+            <p>Код:</p>
+            <pre data-title="html">
+&lt;div class="example2-container"&gt;
+    &lt;div class="example2-block"&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+            <pre data-title="css">
+.example2-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: lightblue;
+}
+
+.example2-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 80px;
+    background: teal;
+}
+            </pre>
+        </div>
+    </section>
 
 </body>
 
