@@ -76,11 +76,12 @@ pre{
   background-color: #eee;
 }
 
-.container {
+.example1-container {
   padding: 10px;
+  background-color: rgb(123, 121, 223);
 }
 
-.content {
+.example1-content {
   height: 100px;
   width: 500px;
   background-color: red;
