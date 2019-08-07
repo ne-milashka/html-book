@@ -29,7 +29,7 @@
                         </svg>
                     </a>
                 </li>
-                <li><a href="#contents">Содержание</a></li> 
+                <li><a href="#contents">Содержание</a></li>
             </menu>
         </div>
     </header>
@@ -81,11 +81,21 @@
     height: 100px;
     width: 500px;
     background-color: red;
-    margin: 0 auto;
+    margin: 0 auto; /* центрирует блок так, что правый и левый маргин становятся одинаковыми */
 }
             </pre>
         </div>
+        <div class="container">
+            <h3>Задача</h3>
+            <p>Сделать шапку для сайта avito</p>
+        </div>
+        <div class="image">
+            <img src="./images/avito.jpg" alt="">
+        </div>
     </section>
+
+
+
     <section>
         <div class="container">
             <h2 id="relative-absolute">Вертикальное и горизонтальное центрирование блока относительно релятивного
@@ -129,17 +139,33 @@
 }
 
 .example2-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; /* позволяет двигать блок относительно родительского релятивного контейнера */
+    top: 50%; /* смещаем блок на 50% от высоты родителя */
+    left: 50%; /* смещаем блок на 50% от ширины родителя */
+    transform: translate(-50%, -50%); /* смещаем блок на 50% от ширины и высоты этого блока */
     width: 120px;
     height: 80px;
     background: teal;
 }
             </pre>
         </div>
+        <div class="container">
+            <h3>Задача</h3>
+            <p>Сделать просмотр изображений как на dns-shop.ru</p>
+            <ul>
+                <li>Размер внешнего контейнера: 100%*600px</li>
+                <li>Вместо картинок можно использовать цветные блоки</li>
+                <li>Вместо стрелочек можно использовать &lt; и &gt;</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="./images/dns.png" alt="">
+        </div>
     </section>
+
+
+
+
 
 </body>
 

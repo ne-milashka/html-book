@@ -137,3 +137,14 @@ p {
   margin: 2em 0 1em;
 }
 
+ul {
+  padding-left: 16px;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+}
