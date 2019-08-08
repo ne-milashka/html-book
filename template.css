@@ -78,11 +78,6 @@ header .nav menu li:first-child a {
   margin-right: 24px;
 }
 
-.icon-svg {
-  color: #323436;
-  fill: currentColor;
-}
-
 pre {
   border-radius: 4px;
   position: relative;
@@ -147,22 +142,4 @@ ul {
 
 .image img {
   max-width: 100%;
-}
-
-
-.exercise1-content {
-  padding: 15px 45px;
-  background-color: #f2f2f2;
-  height: 45px;
-  width: 1200px;
-  border-top: 1px solid #d5dddf;
-  border-bottom: 1px solid #d5dddf;
-  margin: 0 auto;
-  font-size: 15px;
-  color: #999;
-}
-
-.exercise1-content a {
-  text-decoration: none;
-  margin: 7px;
 }
