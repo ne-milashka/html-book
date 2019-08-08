@@ -50,6 +50,7 @@
             <ul>
                 <li><a href="#contents">Содержание</a></li>
                 <li><a href="#margin-0-auto">Центрирование блока относительно родителя</a></li>
+                <li><a href="#flex">Самый правильный способ разнести блоки в разные стороны</a></li>
                 <li><a href="#relative-absolute">Вертикальное и горизонтальное центрирование блока относительно
                         релятивного контейнера</a></li>
             </ul>
@@ -62,7 +63,7 @@
                 того, если использовать max-width вместо width, то, если размер экрана пользователя окажется меньше
                 ширины этого блока, то блок не выйдет за границы экрана, а будет равен ширине экрана. Это весьма
                 распространенная практика</p>
-            <p>Пример:</p>
+            <h3>Пример:</h3>
         </div>
         <style>
             .example1-container {
@@ -103,7 +104,7 @@
         </div>
         <div class="container">
             <h3>Задача</h3>
-            <p>Сделать шапку для сайта avito.ru</p>
+            <p>Сделать шапку для сайта avito.ru. Серый фон шапки должен быть растянут на всю страницу.</p>
         </div>
         <div class="image">
             <img src="./images/avito.jpg" alt="">
@@ -111,13 +112,99 @@
     </section>
 
 
+    <section>
+        <div class="container">
+            <h2 id="flex">Самый правильный способ разнести блоки в разные стороны</h2>
+            <p>Используется, в основном, для построения "шапки" сайта</p>
+            <p>Пример:</p>
+        </div>
+        <style>
+            .example3-container {
+                display: flex;
+                background: lightblue;
+                justify-content: space-between;
+                padding: 5px;
+            }
+
+            .example3-box-left {
+                background: teal;
+            }
+
+            .example3-box-right {
+                background: blueviolet;
+            }
+
+            .example3-container span {
+                display: inline-block;
+                padding: 10px 20px;
+                background: rgba(255, 255, 255, .5);
+                margin: 5px;
+            }
+        </style>
+        <div class="example3-container">
+            <div class="example3-box-left">
+                <span>Brand</span>
+                <span>Stores</span>
+                <span>Actions</span>
+                <span>Contacts</span>
+            </div>
+            <div class="example3-box-right">
+                <span>Settings</span>
+                <span>Account</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Код:</p>
+            <pre data-lang="html">
+<div class="example3-container">
+    <div class="example3-box-left">
+        <span>Brand</span>
+        <span>Stores</span>
+        <span>Actions</span>
+        <span>Contacts</span>
+    </div>
+    <div class="example3-box-right">
+        <span>Settings</span>
+        <span>Account</span>
+    </div>
+</div>
+            </pre>
+            <pre data-lang="css">
+.example3-container {
+    /* Задаём флекс-бокс (позволяет влиять на расположение дочерних элементов) */
+    display: flex;
+    /* Говорим элементам встать так, чтобы между ними, по возможности, образовывалось расстояние */
+    justify-content: space-between; 
+    padding: 5px;
+    background: lightblue;
+}
+
+.example3-box-left {
+    background: teal;
+}
+
+.example3-box-right {
+    background: blueviolet;
+}
+            </pre>
+            <div class="container">
+                <h3>Задача</h3>
+                <p>Доделать шапку для сайта avito.ru так, чтобы правая и левая часть меню были разнесены при помощи
+                    флекс-бокса</p>
+            </div>
+            <div class="image">
+                <img src="./images/avito.jpg" alt="">
+            </div>
+    </section>
+
 
     <section>
         <div class="container">
             <h2 id="relative-absolute">Вертикальное и горизонтальное центрирование блока относительно релятивного
                 контейнера</h2>
-                <p>Эта техника применяется, в основном, для вёрстки модальных окон</p>
-            <p>Пример:</p>
+            <p>Эта техника применяется, в основном, для вёрстки модальных окон</p>
+            <h3>Пример:</h3>
         </div>
         <style>
             .example2-container {
@@ -143,28 +230,28 @@
         <div class="container">
             <p>Код:</p>
             <pre data-lang="html">
-<div class="example2-container">
-    <div class="example2-block"></div>
-</div>
-            </pre>
+    <div class="example2-container">
+        <div class="example2-block"></div>
+    </div>
+                </pre>
             <pre data-lang="css">
-.example2-container {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    background: lightblue;
-}
-
-.example2-block {
-    position: absolute; /* позволяет двигать блок относительно родительского релятивного контейнера */
-    top: 50%;           /* смещаем блок на 50% от высоты родителя */
-    left: 50%;          /* смещаем блок на 50% от ширины родителя */
-    transform: translate(-50%, -50%); /* смещаем блок на 50% от ширины и высоты этого блока */
-    width: 120px;
-    height: 80px;
-    background: teal;
-}
-            </pre>
+    .example2-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background: lightblue;
+    }
+    
+    .example2-block {
+        position: absolute; /* позволяет двигать блок относительно родительского релятивного контейнера */
+        top: 50%;           /* смещаем блок на 50% от высоты родителя */
+        left: 50%;          /* смещаем блок на 50% от ширины родителя */
+        transform: translate(-50%, -50%); /* смещаем блок на 50% от ширины и высоты этого блока */
+        width: 120px;
+        height: 80px;
+        background: teal;
+    }
+                </pre>
         </div>
         <div class="container">
             <h3>Задача</h3>
@@ -179,8 +266,6 @@
             <img src="./images/dns.png" alt="">
         </div>
     </section>
-
-
 
 
     <script src="./lib/hihglight/highlight.pack.js"></script>
