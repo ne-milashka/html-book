@@ -150,19 +150,19 @@ ul {
 }
 
 
-section  div.exercise1-content {
- padding: 15px 45px;
- background-color: #f2f2f2;
- height: 45px;
- width: 1200px;
- border-top: 1px solid #d5dddf;
- border-bottom: 1px solid #d5dddf;
- margin: 0 auto; 
- font-size: 15px;
- color: #999;
+.exercise1-content {
+  padding: 15px 45px;
+  background-color: #f2f2f2;
+  height: 45px;
+  width: 1200px;
+  border-top: 1px solid #d5dddf;
+  border-bottom: 1px solid #d5dddf;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #999;
 }
 
-section  div.exercise1-content a {
- text-decoration: none;
- margin: 7px;
+.exercise1-content a {
+  text-decoration: none;
+  margin: 7px;
 }
