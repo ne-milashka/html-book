@@ -17,12 +17,15 @@ body {
 }
 
 section {
-  margin: 50px 0;
+  padding: 50px 0;
+  margin-bottom: 200px;
+  page-break-after: always;
+  border-bottom: 1px solid #d5dddf;
 }
 
 header .services {
   background-color: #f2f2f2;
-  border-bottom: 1px solid #bcc3ce;
+  border-bottom: 1px solid #d5dddf;
   font-size: 12px;
   padding: 7px 12px;
 }
@@ -81,16 +84,11 @@ header .nav menu li:first-child a {
 }
 
 pre {
-  position: relative;
-  background-color: #eee;
-  padding: 16px;
-  margin: 32px 0 16px 0;
-  font-family: 'Courier New', Courier, monospace;
   border-radius: 4px;
 }
 
 pre:before {
-  content: attr(data-title);
+  content: attr(data-lang);
   display: block;
   position: absolute;
   bottom: 100%;
@@ -101,6 +99,7 @@ pre:before {
 
 h1 {
   font-size: 42px;
+  text-align: center;
 }
 
 h2 {
