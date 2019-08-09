@@ -9,10 +9,10 @@
    justify-content: space-between;
    margin: 0 auto;
    max-width: 980px;
+   font-size: 14px;
  }
 
  .exercise1-box-left {
-   font-size: 15px;
    padding: 15px 0;
    
  }
@@ -24,7 +24,6 @@
  }
 
  div.ex2-box-right {
-   font-size: 15px;
    padding: 15px 0;
    
  }
@@ -32,4 +31,14 @@
  div.ex2-box-right a {
    margin: 7px;
    text-decoration: none;
+   padding: 7px 14px;
+   border-radius: 4px
+ }
+ div.ex2-box-right a:first-child {
+   color: rgb(98, 136, 238);
+ }
+ div.ex2-box-right a:nth-child(2) {
+   background-color: rgb(108, 147, 253);
+   color: white;
+   
  }
