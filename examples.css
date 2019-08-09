@@ -5,7 +5,7 @@
 
 .example1-content {
   height: 100px;
-  width: 500px;
+  max-width: 500px;
   background-color: teal;
   margin: 0 auto;
 }

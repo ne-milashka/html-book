@@ -81,12 +81,13 @@
             <pre data-lang="css">
 .example1-container {
     padding: 10px;
+    background-color: lightblue;
 }
 
 .example1-content {
     height: 100px;
-    width: 500px;
-    background-color: red;
+    max-width: 500px;
+    background-color: teal;
     margin: 0 auto; /* центрирует блок так, что правый и левый маргин становятся одинаковыми */
 }
             </pre>
@@ -105,13 +106,20 @@
         </div>
 
         <!-- Должен быть внешний контейнер серого цвета с бордером снизу -->
-        <div class="exercise1-content">
-            <a href="#">Объявления</a>
-            <a href="#">Магазины</a>
-            <a href="#">Бизнес</a>
-            <a href="#">Помощь</a>
+        <div class="exercise1-block">
+            <div class="ex2-block">
+                <div class="exercise1-box-left">
+                    <a href="#">Объявления</a>
+                    <a href="#">Магазины</a>
+                    <a href="#">Бизнес</a>
+                    <a href="#">Помощь</a>
+                </div>
+                <div class="ex2-box-right">
+                    <a href="#">Вход и регистрация</a>
+                    <a href="#">Подать объявление</a>
+                </div>
+            </div>
         </div>
-
     </section>
 
 
