@@ -63,6 +63,7 @@ a:hover {
 pre {
   border-radius: 4px;
   position: relative;
+  white-space: pre-wrap;
 }
 
 pre:before {
@@ -164,6 +165,10 @@ ul {
 }
 
 @media print {
+  .no-print {
+    display: none;
+  }
+
   header {
     display: none;
   }
@@ -171,5 +176,10 @@ ul {
   section {
     min-height: auto;
     border-bottom: none;
+  }
+
+  a[target="_blank"]:after {
+    content: attr(href);
+    margin-left: 20px;
   }
 }
