@@ -71,12 +71,12 @@
  .ex3-block .ex3-container .ex3-box-right {
    display: block;
    padding: 17px 0;
-   font-size: 14px;
+   font-size: 13px;
  }
  .ex3-block .ex3-container .ex3-box-right a {
    text-decoration: none;
    display: inline-block;
-   padding: 7px 13px;
+   padding: 7px 14px;
    margin-left: 7px;
    border-radius: 3px;
    
@@ -89,4 +89,18 @@
  .ex3-block .ex3-container .ex3-box-right a.button2 {
    background-color: rgb(65, 160, 86);
    color: white;
+ }
+ .ex4-container {
+   position: relative;
+   width: 100%;
+   height: 600px;
+ }
+ .ex4-block {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   background: black;
+   width: 200px;
+   height: 300px;
+   transform: translate(-50%, -50%)
  }
