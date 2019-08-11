@@ -48,14 +48,91 @@
             <h2 id="contents">Содержание</h2>
             <ul>
                 <li><a href="#contents">Содержание</a></li>
+                <li><a href="#git">Кратко о GIT</a></li>
                 <li><a href="#margin-0-auto">Центрирование блока относительно родителя</a></li>
                 <li><a href="#flex">Самый правильный способ разнести блоки в разные стороны</a></li>
                 <li><a href="#relative-absolute">Вертикальное и горизонтальное центрирование блока относительно
                         релятивного контейнера</a></li>
+                <li><a href="#custom-checkbox">Вёрстка чекбоксов</a></li>
             </ul>
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <h2 id="git">Кратко о GIT</h2>
+            <p>GIT &mdash; это система контроля версий. Позволяет отслеживать и фиксировать изменения в коде, смотреть,
+                как развивался проект и какие люди вкладывали в него своё время. Без базовых знаний гита, работать
+                frontend-разработчиком просто нельзя. </p>
+            <h3>Установка</h3>
+            <p> По этой ссылке, вы найдете инструкцию по установке GIT на свой компьютер:
+                <a href="https://git-scm.com/downloads" target="_blank">Download GIT</a>
+            </p>
+            <h3>Настройка</h3>
+            <p>После установки, нам нужно настроить GIT. Самое главное - выполнить команды:</p>
+            <pre>
+git config --global user.name "My Name"
+git config --global user.email myEmail@example.com
+            </pre>
+            <h3>GitHub</h3>
+            <p>Теперь нужно зарегистрироваться на GitHub или на любом другом сервисе для хостинга проектов, основанной
+                на системе контроля версий GIT.</p>
+            <p>
+                <a href="https://github.com/" target="_blank">GitHub.com</a>
+            </p>
+            <p>С помощью генератора ключей, нужно создать новый ключ для репозитория. Для этого, воспользуйтесь командой
+            </p>
+            <pre>
+ssh-keygen
+            </pre>
+            <p>Следуйте инструкциям. После создания ключей, поместите их в папку C:\Users\YOUR_NAME\.ssh, для
+                пользователей Windows или в папку ~/.ssh, для пользователей Linux или MacOS.</p>
+            <p>На сайте GitHub.com добавьте публичный (id_rsa.pub) ssh-ключ. Это можно сделать в разделе настройки
+                пользователя.</p>
+            <p>Создайте на сайте новый проект. После создания проекта, вы найдете ссылку вида
+                git@github.com:YOUR_LOGIN/YOUR_PROJECT.git</p>
+            <p>На своём компьютере создайте папку, где будете хранить ваши проекты. В этой папке откройте терминал
+                (например, C:\projects) и выполните команду:</p>
+            <pre>
+git clone git@github.com:YOUR_LOGIN/YOUR_PROJECT.git
+            </pre>
+            <p>На данном этапе можно сказать, что мы настроили GIT.</p>
+            <h3>Основные команды</h3>
+            <p>Чтобы сохранить измененные файлы в каком-то состоянии, нужно их закоммитить. Для этого нужно сначала
+                добавить измененные файлы в будующий коммит</p>
+            <pre>git add -A</pre>
+            <p>Далее нужно сохранить коммит</p>
+            <pre>git commit -m "Название коммита"</pre>
+            <p>Коммиты лучше всего называть так, чтобы было понятно, что было сделано в этом коммите, как именно
+                изменилось приложение или сайт. Например, "Изменен цвет кнопки корзины". Еще лучше было бы, если бы мы
+                написали это на английском. </p>
+            <p>Теперь нужно отправить изменения на сервер. Для этого есть команда:</p>
+            <pre>git push</pre>
+            <p>Чтобы получить изменения с сервера, существует команда:</p>
+            <pre>git pull</pre>
+            <p>Кроме того, вам стоит изучить такие команды, как merge, status, branch checkout, revert и многие другие.
+            </p>
+            <p>Больше подробностей читать здесь: </p>
+            <ul>
+                <li>
+                    <a href="https://proglib.io/p/git-for-half-an-hour/" target="_blank">
+                        Git за полчаса: руководство дляначинающих
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tproger.ru/translations/git-quick-start/" target="_blank">
+                        Git. Быстрый старт по использованию основных операций с объяснениями
+                    </a>
+                </li>
+                <li>
+                    <a href="https://git-scm.com/book/en/v2" target="_blank">
+                        Pro GIT
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
 
     <section>
         <div class="container">
@@ -81,13 +158,13 @@
             <pre data-lang="css">
 .example1-container {
     padding: 10px;
-    background-color: lightblue;
+    border-color: lightblue;
 }
 
 .example1-content {
     height: 100px;
     max-width: 500px;
-    background-color: teal;
+    border-color: teal;
     margin: 0 auto; /* центрирует блок так, что правый и левый маргин становятся одинаковыми */
 }
             </pre>
@@ -177,33 +254,33 @@
 }
             </pre>
         </div>
-            <div class="container">
-                <h3>Задача</h3>
-                <p>Сделать шапку для сайта habr.com так, чтобы правая и левая часть меню были разнесены при помощи
-                    флекс-бокса</p>
+        <div class="container">
+            <h3>Задача</h3>
+            <p>Сделать шапку для сайта habr.com так, чтобы правая и левая часть меню были разнесены при помощи
+                флекс-бокса</p>
+        </div>
+        <div class="image">
+            <img src="./images/habr.jpg" alt="">
+        </div>
+        <div class="container">
+            <h3>Решение</h3>
+        </div>
+        <div class="ex3-block">
+            <div class="ex3-container">
+                <div class="ex3-box-left">
+                    <a href="#">Публикации</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Пользователи</a>
+                    <a href="#">Хабы</a>
+                    <a href="#">Компании</a>
+                    <a href="#">Песочница</a>
+                </div>
+                <div class="ex3-box-right">
+                    <a href="#" class="button1">Войти</a>
+                    <a href="#" class="button2">Регистрация</a>
+                </div>
             </div>
-            <div class="image">
-                <img src="./images/habr.jpg" alt="">
-            </div>
-            <div class="container">
-                <h3>Решение</h3>
-            </div>
-           <div class="ex3-block">
-               <div class="ex3-container">
-                   <div class="ex3-box-left">
-                       <a href="#">Публикации</a>
-                       <a href="#">Новости</a>
-                       <a href="#">Пользователи</a>
-                       <a href="#">Хабы</a>
-                       <a href="#">Компании</a>
-                       <a href="#">Песочница</a>
-                   </div>
-                   <div class="ex3-box-right">
-                       <a href="#" class="button1">Войти</a>
-                       <a href="#" class="button2">Регистрация</a>
-                   </div>
-               </div>
-           </div>   
+        </div>
     </section>
 
 
@@ -212,9 +289,11 @@
             <h2 id="relative-absolute">Вертикальное и горизонтальное центрирование блока относительно релятивного
                 контейнера</h2>
             <p>Эта техника применяется, в основном, для вёрстки модальных окон</p>
+            <p>Для полного понимания работы flex-box, рекомендую поиграть в игру
+                <a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>
+            </p>
             <h3>Пример:</h3>
         </div>
-
 
         <div class="example2-container">
             <div class="example2-block"></div>
@@ -236,8 +315,8 @@
     
     .example2-block {
         position: absolute; /* позволяет двигать блок относительно родительского релятивного контейнера */
-        top: 50%;           /* смещаем блок на 50% от высоты родителя */
-        left: 50%;          /* смещаем блок на 50% от ширины родителя */
+        top: 50%; /* смещаем блок на 50% от высоты родителя */
+        left: 50%; /* смещаем блок на 50% от ширины родителя */
         transform: translate(-50%, -50%); /* смещаем блок на 50% от ширины и высоты этого блока */
         width: 120px;
         height: 80px;
@@ -265,6 +344,162 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <h2 id="custom-checkbox">Вёрстка чекбоксов</h2>
+            <p>Вёрстка почти каждой формы предполагает изменение вида стандартных чекбоксов. Изначально, они выглядят
+                вот так: <input type="checkbox"> и редко когда вписываются в дизайн. Поэтому каждый верстальщик знает,
+                как кастомизировать чекбоксы. Сейчас и мы научимся это делать.</p>
+            <p>В кратце, наша задача - использовать label со скрытым внутри чекбоксом. Дело в том, что в HTML клик по
+                label переадресует его на внутенний элемент input. Кроме того, label можно использовать с атрибутом for,
+                значением которого выступает id элемента input, находящегося снаружи нашего label, но применения этой
+                конструкции я нашел лишь пару раз в своей практике.</p>
+            <p>В этом видео Вадим Макеев подробно рассказывает об этой технике вёрстки чекбокса:</p>
+            <p><a href="https://youtu.be/E6kLaaQFctU" target="_blank">Смотреть на YouTube</a></p>
+            <iframe class="no-print" width="100%" height="480" src="https://www.youtube.com/embed/E6kLaaQFctU"
+                frameborder="0" allowfullscreen></iframe>
+            <h3>Пример:</h3>
+            <div class="example4">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="visually-hidden">
+                    <span class="checker"></span>
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="visually-hidden" checked>
+                    <span class="checker"></span>
+                </label>
+            </div>
+            <p>Код:</p>
+            <pre data-lang="html">
+<label class="custom-checkbox">
+    <input type="checkbox" class="visually-hidden">
+    <span class="checker"></span>
+</label>
+            </pre>
+            <pre data-lang="css">
+.example4 label.custom-checkbox {
+    /* Контейнер должен быть релятивным, так как внутри него мы разместим два абсолютно спозиционированных элемента */
+    position: relative;
+    /* скрываем элементы, попадающие за границы label */
+    overflow: hidden;
+    border: 1px solid teal;
+    /* По умолчанию, label - это строчный элемент. С высокой вероятностью, нам нужно будет добавлять вертикальные margin и padding, поэтому сразу сделаем его строчно-блочным*/
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 4px;
+    /* Делаем так, чтобы чек-бокс нельзя было выделить курсором, а только нажать */
+    user-select: none;
+    /* Я приверженец того, что все интерактивные элементы должны иметь cursor: pointer, поэтому задаём и его */
+    cursor: pointer;
+}
+
+/* указываем селектор на наш конкретный инпут с типом чекбокс */
+.example4 label.custom-checkbox input[type='checkbox'] {
+    /* Выводим стандартный чекбокс за границы label */
+    position: absolute;
+    right: 100%;
+    top: 0;
+}
+
+/* Задаем кастомную галочку для чекбокса и скрываем её по умолчанию */
+.example4 label.custom-checkbox .checker {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* В псевдо-элементе допишем саму галочку */
+.example4 label.custom-checkbox .checker:after {
+    content: '✓';
+    display: none;
+}
+
+/* Несколько сложноее CSS правило: когда чекбокс будет иметь атрибут checked, его сосед снизу (селектор +) с классом .checker, примет эти стили */
+.example4 label.custom-checkbox input[type='checkbox']:checked+.checker {
+    /* Показываем наш элемент с галочкой */
+    display: block;
+    background-color: teal;
+    color: white;
+}
+
+/* Когда чекбокс :checked, after-элемент у соседа снизу с классом .checker, должен появиться */
+.example4 label.custom-checkbox input[type='checkbox']:checked+.checker:after {
+    display: block;
+}
+
+/* Не все люди используют для просмотра веб-страниц мышь, а некоторые из них используют вообще только клавиатуру. Так вот, чтобы интерактивные элементы подсвечивались, когда фокус клавиатуры попадал на них, им нужно задать отдельные стили. */
+/* Когда скрытый инпут окажется в фокусе, его сосед с классом .checker примет стили */
+.example4 label.custom-checkbox input[type='checkbox']:focus+.checker {
+    box-shadow: 0 0 5px 0 teal;
+    display: block;
+}
+
+/* Этот класс позволяет правильно скрыть элемент с экрана так, чтобы он был доступен для скринридеров */
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+            </pre>
+            <p>Подробнее о visually-hidden можно почитать здесь:
+                <a href="https://htmlacademy.ru/blog/useful/css/short-12" target="_blank">Как прятать [элементы]</a>
+            </p>
+            <h3>Задача</h3>
+            <p>Сверстать чекбоксы как в gmail.</p>
+            <div class="image">
+                <img src="./images/gmail-checkboxes.png" alt="">
+            </div>
+            <p>Картинки для чекбоксов взять отсюда:</p>
+            <ul>
+                <li>
+                    <a target="_blank"
+                        href="https://www.gstatic.com/images/icons/material/system/1x/check_box_outline_blank_black_20dp.png">
+                        Unchecked checkbox
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://ssl.gstatic.com/ui/v1/menu/checkmark.png">
+                        Checked checkbox
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://www.gstatic.com/images/icons/material/system/1x/star_border_black_20dp.png">
+                        Unchecked star
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://www.gstatic.com/images/icons/material/system/1x/star_googyellow500_20dp.png">
+                        Checked star
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://www.gstatic.com/images/icons/material/system/1x/label_important_outline_black_20dp.png">
+                        Unchecked label
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank"
+                        href="https://www.gstatic.com/images/icons/material/system/1x/label_important_googyellow500_20dp.png">
+                        Checked label
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <script src="./lib/hihglight/highlight.pack.js"></script>
     <script src="./script.js"></script>

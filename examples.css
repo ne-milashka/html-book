@@ -1,12 +1,12 @@
 .example1-container {
   padding: 10px;
-  background-color: lightblue;
+  border: 2px solid lightblue;
 }
 
 .example1-content {
   height: 100px;
   max-width: 500px;
-  background-color: teal;
+  border: 2px solid teal;
   margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@
   position: relative;
   width: 100%;
   height: 300px;
-  background: lightblue;
+  border: 2px solid lightblue;
 }
 
 .example2-block {
@@ -22,29 +22,91 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px;
-  height: 80px;
-  background: teal;
+  width: 300px;
+  height: 100px;
+  border: 2px solid teal;
 }
 
 .example3-container {
   display: flex;
   background: lightblue;
+  border: 1px solid lightblue;
   justify-content: space-between;
   padding: 5px;
 }
 
 .example3-box-left {
   background: teal;
+  border: 1px solid teal;
 }
 
 .example3-box-right {
   background: blueviolet;
+  border: 1px solid blueviolet;
 }
 
 .example3-container span {
   display: inline-block;
   padding: 10px 20px;
   background: rgba(255, 255, 255, .5);
+  border: 1px solid gray;
   margin: 5px;
+}
+
+.example4 label.custom-checkbox {
+  position: relative;
+  border: 1px solid teal;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.example4 label.custom-checkbox .checker {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.example4 label.custom-checkbox .checker:after {
+  content: '✓';
+  display: none;
+}
+
+.example4 label.custom-checkbox input[type='checkbox'] {
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+
+.example4 label.custom-checkbox input[type='checkbox']:checked+.checker {
+  display: block;
+  background-color: teal;
+  color: white;
+}
+
+.example4 label.custom-checkbox input[type='checkbox']:checked+.checker:after {
+  display: block;
+}
+
+.example4 label.custom-checkbox input[type='checkbox']:focus+.checker {
+  box-shadow: 0 0 5px 0 teal;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
